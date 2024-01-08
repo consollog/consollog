@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/05e4b2d9e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h3 id="page">Sing Up</h3>
+            <form>
+                <div class="input-group">
+                    <div id="name" class="input-box">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="name">
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email">
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+                    </div>
+
+                    <p>Forrget password ?<a href="#"> Click Me! </a></p>
+
+                </div>
+                <div class="btn-field">
+                    <button type="button" onclick="singup()" id="btnsingup" class="sing up">sing Up</button>
+                    <button type="button" onclick="login()" id="btnlogin" class="Login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        let btnlogin = document.getElementById("btnlogin");
+        let btnsingup = document.getElementById("btnsingup")
+        let name = document.getElementById("name")
+        let page = document.getElementById("page")
+
+
+        function login() {
+            name.style.maxHeight = "0";
+            btnlogin.style.backgroundColor = "#3c00a0"
+            btnlogin.style.color = "#fff"
+            btnsingup.style.backgroundColor = "#eaeaea"
+            btnsingup.style.color = "#555"
+            page.innerHTML = "Login"
+        }
+
+        function singup() {
+            name.style.maxHeight = "65px";
+            btnlogin.style.backgroundColor = "#eaeaea"
+            btnlogin.style.color = "#555"
+            btnsingup.style.backgroundColor = "#3c00a0"
+            btnsingup.style.color = "#fff"
+            page.innerHTML = "Sign Up"
+        }
+
+
+    </script>
+</body>
+
+</html>
